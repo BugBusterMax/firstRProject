@@ -12,10 +12,13 @@ library(tidyverse)
 library(Stat2Data)
 data("Hawks")
 library(dplyr)
-hSF <- Hawks %>% filter(Species == "Red-tailed" & Weight >= 1000) %>% select(Wing, Weight, Tail)
+hSF <- Hawks %>% filter(Species == "RT" & Weight >= 1000) %>% select(Wing, Weight, Tail)
 print(hSF)
+head(hSF)
+
 ```
 ## 1.1 (Q2)
 ```{r}
-
+n_examples <- nrow(hSF)
+print(n_examples)
 ```
