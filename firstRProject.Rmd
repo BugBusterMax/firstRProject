@@ -23,6 +23,21 @@ n_examples <- nrow(hSF)
 print(n_examples)
 ```
 ## 1.2 (Q1)
-```{R}
-
+```{r}
+hSF_sorted <- hSF %>% arrange(Wing)
+top_five <- head(hSF_sorted, 5)
+print(top_five)
 ```
+## 1.3 (Q1)
+```{r}
+hawkSpeciesNameCodes <- data.frame(species_code = c("CH", "RT", "SS"), species_name_full = c("Cooper's", "Red-tailed", "Sharp-shinned"))
+print(hawkSpeciesNameCodes)
+```
+## 1.3 (Q2)
+```{r}
+library(dplyr)
+hawksFullName <- Hawks %>% left_join(hawkSpeciesNameCodes, by = c("Species" = "species_code")) %>% select(species_name_full, Wing, Weight) %>% rename(Species = species_name_full)
+print(hawksFullName)
+```
+## 1.3 (Q3)
+
