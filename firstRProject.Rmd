@@ -22,3 +22,7 @@ head(hSF)
 n_examples <- nrow(hSF)
 print(n_examples)
 ```
+## 1.2 (Q1)
+```{R}
+
+```
